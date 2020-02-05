@@ -1,0 +1,6 @@
+= Changelog
+
+== Version 1.0 (Wed 5 Feb 2020)
+
+First version of this project.
+

@@ -1,0 +1,9 @@
+Dockerfile
+node_modules
+slides.adoc
+README.adoc
+CHANGELOG.adoc
+.gitlab-ci.yml
+docker-compose.yml
+.gitignore
+.git

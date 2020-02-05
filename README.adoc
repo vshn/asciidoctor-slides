@@ -1,0 +1,12 @@
+= Reveal.js Presentation Generator
+
+This project generates a Docker image that can be used to generate Asciidoctor+Reveal.js presentations. It isolates users from the underlying Node.js infrastructure required to create presentations.
+
+== Build
+
+Run the following command to build the docker image:
+
+`docker build -t vshn/asciidoctor-slides:1.0`
+
+Then push the image to Docker Hub to make it publicly available.
+
