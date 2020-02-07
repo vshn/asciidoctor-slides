@@ -4,9 +4,9 @@ This project generates a Docker image that can be used to generate Asciidoctor+R
 
 == Build
 
-Run the following command to build the docker image:
+Run the following command to build the docker image (remember to change TAG to the proper value)
 
-`docker build -t vshn/asciidoctor-slides:1.0`
+`docker build -t vshn/asciidoctor-slides:TAG`
 
 Then push the image to Docker Hub to make it publicly available.
 
