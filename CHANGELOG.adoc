@@ -3,6 +3,7 @@
 == Version 1.1 (Fri 7 Feb 2020)
 
 * Added support for diagrams using Kroki
+* Added support for multiple columns
 * Updated software versions
 
 == Version 1.0 (Wed 5 Feb 2020)

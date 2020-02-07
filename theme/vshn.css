@@ -36,6 +36,19 @@ body {
   line-height: 1.3;
   font-weight: inherit; }
 
+
+/*********************************************
+ * MULTI-COLUMN SUPPORT
+ *********************************************/
+
+section.columns {
+    display: flex!important;
+}
+
+section .column {
+    flex: 1;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
