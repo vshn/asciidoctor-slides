@@ -1,5 +1,10 @@
 = Changelog
 
+== Version 1.1 (Fri 7 Feb 2020)
+
+* Added support for diagrams using Kroki
+* Updated software versions
+
 == Version 1.0 (Wed 5 Feb 2020)
 
 First version of this project.
