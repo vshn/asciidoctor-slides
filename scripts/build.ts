@@ -2,6 +2,7 @@
 // the asciidoctor-reveal.js JavaScript library.
 import * as asciidoctorLib from 'asciidoctor.js';
 import * as asciidoctorRevealjs from 'asciidoctor-reveal.js';
+import * as asciidoctorKroki from 'asciidoctor-kroki';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -22,5 +23,10 @@ if (!fs.existsSync(filepath)) {
 // Drive the transformation from Asciidoc to HTML
 const asciidoctor = asciidoctorLib();
 asciidoctorRevealjs.register();
-const options = { safe: 'safe', backend: 'revealjs', outdir: '/build' };
+asciidoctorKroki.register(asciidoctor.Extensions);
+const options = {
+    safe: 'safe',
+    backend: 'revealjs',
+    outdir: '/build'
+};
 asciidoctor.convertFile(filepath, options);

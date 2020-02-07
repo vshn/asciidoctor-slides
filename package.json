@@ -26,6 +26,7 @@
     "typescript": "^3.7.3"
   },
   "dependencies": {
+    "asciidoctor-kroki": "^0.6.0",
     "asciinema-player": "^2.6.1",
     "reveal.js": "^3.8.0",
     "typeface-ubuntu": "0.0.65",
