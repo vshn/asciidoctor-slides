@@ -41,12 +41,12 @@ body {
  * MULTI-COLUMN SUPPORT
  *********************************************/
 
-section.columns {
-    display: flex!important;
+ section > .columns > .content {
+  display: flex;
 }
 
-section .column {
-    flex: 1;
+.columns .content .column {
+  flex: 1;
 }
 
 /*********************************************
