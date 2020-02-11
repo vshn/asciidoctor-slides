@@ -1,32 +1,56 @@
-// Drives the creation of the Reveal.js presentation using
-// the asciidoctor-reveal.js JavaScript library.
-import * as asciidoctorLib from 'asciidoctor.js';
-import * as asciidoctorRevealjs from 'asciidoctor-reveal.js';
-import * as asciidoctorKroki from 'asciidoctor-kroki';
+/**
+ * Drives the creation of the Reveal.js presentation using
+ * the asciidoctor-reveal.js JavaScript library.
+ */
+import asciidoctor from '@asciidoctor/core'
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Check that there is a parameter
+// Check that there is a 'filename' parameter
 if (process.argv.length < 3) {
-    console.error('build.ts: Missing "filename" parameter. Exiting');
+    console.error('asciidoctor-slides: Missing "filename" parameter. Exiting');
     process.exit(1);
 }
 
-// Check that the parameter points to a file that exists
+// Check that the parameter points to a file that actually exists
 const filename = process.argv[2];
 const filepath : string = path.join('/', 'build', filename);
 if (!fs.existsSync(filepath)) {
-    console.error('parse_files.ts: The path "%s" is invalid. Exiting.', filepath);
+    console.error('asciidoctor-slides: The path "%s" is invalid. Exiting.', filepath);
     process.exit(1);
 }
 
+const adoc = asciidoctor();
+
+// Load plugins
+const registry = adoc.Extensions.create();
+require('./asciinema.ts').register(registry);
+require('./footer.ts').register(registry);
+require('asciidoctor-kroki').register(registry);
+require('asciidoctor-reveal.js').register(registry);
+
 // Drive the transformation from Asciidoc to HTML
-const asciidoctor = asciidoctorLib();
-asciidoctorRevealjs.register();
-asciidoctorKroki.register(asciidoctor.Extensions);
 const options = {
     safe: 'safe',
     backend: 'revealjs',
-    outdir: '/build'
+    outdir: '/build',
+    'extension_registry': registry,
+    'attributes': {
+        'imagesdir': 'assets/images',
+        'icons': 'font',
+        'icon-set': 'fi',
+        'hide-uri-scheme': '',
+        'source-highlighter': 'highlightjs',
+        'kroki-server-url': 'https://vshn-kroki.appuioapp.ch',
+        'stem': '',
+        'revealjsdir': 'node_modules/reveal.js',
+        'revealjs_customtheme': 'theme/vshn.css',
+        'revealjs_controls': 'false',
+        'revealjs_controlsTutorial': 'false',
+        'revealjs_transition': 'none',
+        'revealjs_history': 'true',
+        'revealjs_backgroundTransition': 'none',
+        'revealjs_slideNumber': 'true'
+    }
 };
-asciidoctor.convertFile(filepath, options);
+adoc.convertFile(filepath, options);
