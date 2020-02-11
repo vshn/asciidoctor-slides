@@ -6,7 +6,7 @@ function footer (registry) {
   registry.postprocessor(function () {
     var self = this
     self.process(function (doc, output) {
-      console.log('Applying footer tree processor')
+      console.log('asciidoctor-slides: Applying footer postprocessor')
       const text = `
 <div id="vshn-footer" class="footer">
   <span class="element"><img src="assets/images/vshn_footer.png"></span>
