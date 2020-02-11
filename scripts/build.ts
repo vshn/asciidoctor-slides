@@ -22,14 +22,13 @@ if (!fs.existsSync(filepath)) {
 
 const adoc = asciidoctor();
 
-// Load plugins
+console.log('asciidoctor-slides: Loading plugins')
 const registry = adoc.Extensions.create();
 require('./asciinema.ts').register(registry);
 require('./footer.ts').register(registry);
 require('asciidoctor-kroki').register(registry);
 require('asciidoctor-reveal.js').register(registry);
 
-// Drive the transformation from Asciidoc to HTML
 const options = {
     safe: 'safe',
     backend: 'revealjs',
@@ -53,4 +52,6 @@ const options = {
         'revealjs_slideNumber': 'true'
     }
 };
+console.log('asciidoctor-slides: Transforming Asciidoc source to HTML with attributes:')
+console.dir(options.attributes)
 adoc.convertFile(filepath, options);
