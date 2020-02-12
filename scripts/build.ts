@@ -27,7 +27,7 @@ const registry = adoc.Extensions.create();
 require('./asciinema.ts').register(registry);
 require('./footer.ts').register(registry);
 require('asciidoctor-kroki').register(registry);
-require('asciidoctor-reveal.js').register(registry);
+require('@asciidoctor/reveal.js').register(registry);
 
 const options = {
     safe: 'safe',

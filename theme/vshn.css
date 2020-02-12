@@ -177,10 +177,15 @@ body {
   max-height: 400px;
   word-wrap: normal; }
 
+table.tableblock, th.tableblock, td.tableblock {
+  border: solid 0px transparent!important;
+}
+
 .reveal table {
   margin: auto;
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border: solid 1px transparent; }
 
 .reveal table th {
   font-weight: bold; }
@@ -189,7 +194,7 @@ body {
 .reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid!important; }
 
 .reveal table th[align="center"],
 .reveal table td[align="center"] {
@@ -201,7 +206,7 @@ body {
 
 .reveal table tbody tr:last-child th,
 .reveal table tbody tr:last-child td {
-  border-bottom: none; }
+  border-bottom: none!important; }
 
 .reveal sup {
   vertical-align: super;
