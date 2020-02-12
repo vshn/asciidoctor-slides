@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.4 (Wed 12 Feb 2020)
+
+* Offline support for Highlight.js themes
+
 == Version 1.3 (Wed 12 Feb 2020)
 
 * Updated to latest version of asciidoctor-reveal.js
