@@ -40,6 +40,7 @@ const options = {
         'iconfont-cdn': 'theme/fontawesome.css',
         'hide-uri-scheme': '',
         'source-highlighter': 'highlightjs',
+        'highlightjs-theme': 'node_modules/highlightjs/styles/vs.css',
         'kroki-server-url': 'https://vshn-kroki.appuioapp.ch',
         'stem': '',
         'revealjsdir': 'node_modules/reveal.js',
