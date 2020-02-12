@@ -27,6 +27,7 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
     "typeface-ubuntu": "0.0.65",
-    "typeface-ubuntu-mono": "0.0.72"
+    "typeface-ubuntu-mono": "0.0.72",
+    "@fortawesome/fontawesome-free": "^5.12.1"
   }
 }

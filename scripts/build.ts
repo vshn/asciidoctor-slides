@@ -37,7 +37,7 @@ const options = {
     'attributes': {
         'imagesdir': 'assets/images',
         'icons': 'font',
-        'icon-set': 'fi',
+        'iconfont-cdn': 'theme/fontawesome.css',
         'hide-uri-scheme': '',
         'source-highlighter': 'highlightjs',
         'kroki-server-url': 'https://vshn-kroki.appuioapp.ch',
