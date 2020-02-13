@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.4.1 (Thu 13 Feb 2020)
+
+* Added a style to have vertically-aligned columns
+
 == Version 1.4 (Wed 12 Feb 2020)
 
 * Offline support for Highlight.js themes

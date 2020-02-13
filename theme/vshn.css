@@ -41,8 +41,14 @@ body {
  * MULTI-COLUMN SUPPORT
  *********************************************/
 
- section > .columns > .content {
+section > .columns > .content {
   display: flex;
+}
+
+section > .columns-middle > .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .columns .content .column {
