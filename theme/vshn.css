@@ -183,8 +183,12 @@ section > .columns-middle > .content {
   max-height: 400px;
   word-wrap: normal; }
 
-table.tableblock, th.tableblock, td.tableblock {
-  border: solid 0px transparent!important;
+.reveal table.tableblock, th.tableblock, td.tableblock {
+  border: solid 1px transparent;
+}
+
+.reveal .colist table td {
+  border-bottom: solid 1px transparent;
 }
 
 .reveal table {
@@ -200,7 +204,8 @@ table.tableblock, th.tableblock, td.tableblock {
 .reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid!important; }
+  border-bottom: 1px solid;
+  border-right: none; }
 
 .reveal table th[align="center"],
 .reveal table td[align="center"] {
@@ -212,7 +217,7 @@ table.tableblock, th.tableblock, td.tableblock {
 
 .reveal table tbody tr:last-child th,
 .reveal table tbody tr:last-child td {
-  border-bottom: none!important; }
+  border-bottom: none; }
 
 .reveal sup {
   vertical-align: super;
