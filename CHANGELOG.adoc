@@ -1,5 +1,12 @@
 = Changelog
 
+== Version 1.5 (Thu 20 Feb 2020)
+
+* The builder script outputs usage help and executes faster
+* Added a new APPUiO-branded theme
+* Added strikethrough style
+* Added a new optional header to the presentation
+
 == Version 1.4.1 (Thu 13 Feb 2020)
 
 * Added a style to have vertically-aligned columns

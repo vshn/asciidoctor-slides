@@ -7,8 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "node_modules/.bin/ts-node scripts/build.ts $FILENAME",
-    "clean": "rm *.html"
+    "build": "gulp",
+    "clean": "rm -rf dist; rm ./*.js; rm src/*.js",
+    "help": "node_modules/.bin/ts-node src/asciidoctor-slides.ts --help"
   },
   "repository": {
     "type": "git",
@@ -16,19 +17,31 @@
   },
   "author": "Adrian Kosmaczewski",
   "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^12.12.26",
+  "dependencies": {
     "@asciidoctor/reveal.js": "^3.1.0",
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "asciidoctor": "^2.1.1",
     "asciidoctor-kroki": "^0.6.0",
     "asciinema-player": "^2.6.1",
+    "commander": "^4.1.1",
+    "highlightjs": "^9.16.2",
+    "lato-font": "^3.0.0",
     "pygments": "^0.2.1",
     "reveal.js": "^3.9.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5",
     "typeface-ubuntu": "0.0.65",
-    "typeface-ubuntu-mono": "0.0.72",
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "highlightjs": "^9.16.2"
+    "typeface-ubuntu-mono": "0.0.72"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/gulp": "^4.0.6",
+    "@types/gulp-typescript": "^2.13.0",
+    "@types/node": "^12.12.26",
+    "gulp": "^4.0.2",
+    "gulp-chmod": "^3.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
   }
 }
