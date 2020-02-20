@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "clean": "rm -rf dist; rm ./*.js; rm src/*.js",
+    "clean": "rm -rf dist; rm ./*.js;",
     "help": "node_modules/.bin/ts-node src/asciidoctor-slides.ts --help"
   },
   "repository": {
