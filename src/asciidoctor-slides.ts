@@ -56,6 +56,7 @@ const options = {
         'source-highlighter': 'highlightjs',
         'highlightjs-theme': 'node_modules/highlightjs/styles/vs.css',
         'kroki-server-url': 'https://vshn-kroki.appuioapp.ch',
+        'kroki-fetch-diagram': '',
         'stem': '',
         'revealjsdir': 'node_modules/reveal.js',
         'revealjs_backgroundTransition': 'none',

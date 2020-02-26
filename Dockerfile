@@ -17,6 +17,9 @@ WORKDIR /presentation
 COPY ["package.json", "package-lock.json", "./"]
 RUN npm install --production
 
+# Required by the asciidoctor-kroki plugin, to store diagrams correctly
+WORKDIR /build
+
 COPY --from=builder /presentation/dist /presentation/dist
 COPY theme /presentation/theme
 COPY generate-vshn-slides.sh /usr/local/bin/generate-vshn-slides
