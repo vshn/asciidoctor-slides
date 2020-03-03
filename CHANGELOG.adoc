@@ -1,5 +1,13 @@
 = Changelog
 
+== Version 1.7 (Tue 3 Mar 2020)
+
+* Extended Asciinema plugin supports block elements.
+
+== Version 1.6 (Wed 26 Feb 2020)
+
+* Added possibility to store diagrams offline.
+
 == Version 1.5 (Thu 20 Feb 2020)
 
 * The builder script outputs usage help and executes faster
