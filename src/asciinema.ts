@@ -20,13 +20,13 @@ interface AsciinemaBlockParameters {
 function createAsciinemaBlockParameters(src: string, attrs: any = {}): AsciinemaBlockParameters {
   return {
     src: src,
-    poster: attrs.poster || 'npt:0:0',
-    cols: attrs.cols || '86',
-    rows: attrs.rows || '21',
-    idleTimeLimit: attrs.idleTimeLimit || '1',
-    speed: attrs.speed || '1.1',
-    fontSize: attrs.fontSize || 'medium', // small, medium, big
-    theme: attrs.theme || 'tango'         // asciinema, tango, solarized-dark, solarized-light, monokai
+    poster:        attrs['poster']          || 'npt:0:0',
+    cols:          attrs['cols']            || '86',
+    rows:          attrs['rows']            || '21',
+    idleTimeLimit: attrs['idle-time-limit'] || '1',
+    speed:         attrs['speed']           || '1.1',
+    fontSize:      attrs['font-size']       || 'medium', // small, medium, big
+    theme:         attrs['theme']           || 'tango'       // asciinema, tango, solarized-dark, solarized-light, monokai
   }
 }
 
