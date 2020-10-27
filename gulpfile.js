@@ -1,6 +1,5 @@
-import gulp from 'gulp'
-import ts from 'gulp-typescript'
-
+const gulp = require('gulp')
+const ts = require('gulp-typescript')
 const uglify = require('gulp-uglify')
 const chmod = require('gulp-chmod')
 const insert = require('gulp-insert')

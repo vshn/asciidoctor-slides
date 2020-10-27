@@ -5,9 +5,9 @@ WORKDIR /presentation
 COPY ["package.json", "package-lock.json", "/presentation/"]
 RUN npm install
 
-COPY ["tsconfig.json", "gulpfile.ts", "./"]
+COPY ["tsconfig.json", "gulpfile.js", "./"]
 COPY src /presentation/src
-RUN node_modules/.bin/gulp
+RUN npm run build
 
 
 # Step 2: Runtime image
