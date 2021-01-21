@@ -12,7 +12,7 @@ import * as path from 'path';
  * @param message The message to show
  */
 function logVerbose(message: any) : void {
-    if (program.verbose) {
+    if (opts.verbose) {
         console.log(message);
     }
 }
@@ -22,9 +22,10 @@ program.version('1.0')
     .requiredOption('-f, --filename <path>', '(mandatory) path of the Asciidoc file to process.')
     .option('-v, --verbose', '(optional) display information about the transformation process', false)
     .parse(process.argv);
+const opts = program.opts()
 
 // Check that the parameter points to a file that actually exists
-const filepath : string = path.join('/', 'build', program.filename);
+const filepath : string = path.join('/', 'build', opts.filename);
 if (!fs.existsSync(filepath)) {
     console.error('asciidoctor-slides: The path "%s" is invalid. Exiting.', filepath);
     program.outputHelp();
