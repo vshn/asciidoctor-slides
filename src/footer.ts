@@ -9,12 +9,12 @@ function footer (registry : any) {
     let self : any = this;
     self.process(function (doc : any, output : any) {
       const footerText = doc.getAttribute('footer-text', 'VSHN – The DevOps Company');
-      const footerImage = doc.getAttribute('footer-image', 'vshn_footer.png');
+      const footerImage = doc.getAttribute('footer-image', 'vshn.svg');
       const imagesDir = doc.getAttribute('imagesdir');
       const footerPath = path.join(imagesDir, footerImage);
       const text = `
 <div id="slides-footer" class="footer">
-  <span class="element"><img src="${footerPath}"></span>
+  <span class="element"><img src="${footerPath}" id="footer_logo"></span>
   <span class="element">${footerText}</span>
   <span class="element">&nbsp;</span>
 </div>

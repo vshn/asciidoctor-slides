@@ -3,8 +3,7 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
- @import "~@fontsource/montserrat/900.css";
- @import "~@fontsource/montserrat/index.css";
+ @import url(typeface-ubuntu.css);
  @import url(typeface-ubuntu-mono.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
@@ -17,19 +16,19 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-size: 28px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-size: 35px;
   font-weight: normal;
-  color: rgb(0, 13, 26); }
+  color: #175787; }
 
 ::selection {
   color: #fff;
-  background: rgb(76, 195, 255);
+  background: #98bdef;
   text-shadow: none; }
 
 ::-moz-selection {
   color: #fff;
-  background: rgb(76, 195, 255);
+  background: #98bdef;
   text-shadow: none; }
 
 .reveal .slides section,
@@ -66,9 +65,9 @@ section > .columns-middle > .content {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 1em 0;
-  color: rgb(0, 13, 26);
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-weight: 900;
+  color: #175787;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
@@ -76,17 +75,17 @@ section > .columns-middle > .content {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 70px;
+  font-size: 2.6em;
   margin-bottom: 1.2em; }
 
 .reveal h2 {
-  font-size: 50px; }
+  font-size: 1.7em; }
 
 .reveal h3 {
-  font-size: 40px; }
+  font-size: 1.3em; }
 
 .reveal h4 {
-  font-size: 30px; }
+  font-size: 1em; }
 
 .reveal h1 {
   text-shadow: none; }
@@ -241,20 +240,20 @@ section > .columns-middle > .content {
  * LINKS
  *********************************************/
 .reveal a {
-  color: rgb(76, 195, 255);
+  color: #2a76dd;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: rgb(76, 195, 255);
+  color: #6ca0e8;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: rgb(76, 195, 255); }
+  background: #1a53a1; }
 
 /*********************************************
  * IMAGES
@@ -275,21 +274,21 @@ section > .columns-middle > .content {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: rgb(76, 195, 255);
+  border-color: #2a76dd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: rgb(255, 198, 28); }
+  color: #2a76dd; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: rgb(255, 198, 28); }
+  color: #2a76dd; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -314,7 +313,6 @@ section.coverimage>.admonitionblock,
 section.coverimage>.paragraph,
 section.coverimage>.slide-content .ulist {
   background-color: rgba(255,255,255,0.6);
-  color: rgb(0, 13, 26);
 }
 
 /*********************************************
@@ -322,10 +320,9 @@ section.coverimage>.slide-content .ulist {
  *********************************************/
 
  .reveal .slide-number {
-  font-family: "Montserrat";
+  font-family: "Ubuntu";
   font-size: 50%;
-  background-color: rgb(0, 13, 26);
-  color: rgb(76, 195, 255);
+  background-color: #175787;
   padding: 0px 15px 9px 15px;
 }
 
@@ -346,8 +343,8 @@ section.coverimage>.slide-content .ulist {
   display: table;
   width: 100%;
   bottom: 0;
-  background-color: rgb(0, 13, 26);
-  color: rgb(76, 195, 255);
+  background-color: #175787;
+  color: white;
 }
 
 .footer span {
@@ -355,7 +352,7 @@ section.coverimage>.slide-content .ulist {
   padding: 0px 15px 10px 15px;
   min-width: 150px;
   text-align: center;
-  font-family: "Montserrat";
+  font-family: "Ubuntu";
   font-size: 50%;
   vertical-align: middle;
 }
@@ -369,17 +366,6 @@ section.coverimage>.slide-content .ulist {
   text-align: center;
 }
 
-.footer #footer_logo {
-  height: 29px;
-  /*
-  Calculated with
-  https://codepen.io/sosuke/pen/Pjoqqp
-  via
-  https://stackoverflow.com/a/53336754
-  */
-  filter: invert(59%) sepia(97%) saturate(735%) hue-rotate(173deg) brightness(103%) contrast(101%);
-}
-
 
 /*********************************************
  * HORIZONTAL RULER
@@ -387,7 +373,7 @@ section.coverimage>.slide-content .ulist {
 
 hr {
   width: 30%;
-  border: 2px solid rgb(255, 198, 28);
+  border: 2px solid #ffa600;
   border-radius: 5px;
 }
 
@@ -405,7 +391,7 @@ hr {
   content: '';
   height: 4px;
   width: 30%;
-  background: rgb(255, 198, 28);
+  background: #ffa600;
   position: absolute;
   margin: auto;
   bottom: -5px;
@@ -489,6 +475,5 @@ hr {
  .line-through {
   text-decoration: line-through;
   text-decoration-style: wavy;
-  text-decoration-thickness: 3px;
-  text-decoration-color: rgb(76, 195, 255);
+  text-decoration-color: #ffa600;
 }
