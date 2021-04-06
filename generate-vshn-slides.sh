@@ -14,4 +14,5 @@ cp -R /presentation/node_modules/lato-font /build/node_modules/lato-font
 cp -R /presentation/node_modules/typeface-ubuntu /build/node_modules/typeface-ubuntu
 cp -R /presentation/node_modules/typeface-ubuntu-mono /build/node_modules/typeface-ubuntu-mono
 cp -R /presentation/node_modules/@fortawesome /build/node_modules/@fortawesome
+cp -R /presentation/node_modules/@fontsource /build/node_modules/@fontsource
 cp -R /presentation/node_modules/highlightjs /build/node_modules/highlightjs
