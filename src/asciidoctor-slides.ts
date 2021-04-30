@@ -19,7 +19,8 @@ function logVerbose(message: any) : void {
 
 // Parse the command line parameters
 program.version('1.11')
-    .requiredOption('-f, --filename <path>', '(mandatory) path of the Asciidoc file to process.')
+    .requiredOption('-f, --filename <path>', '(mandatory) path of the Asciidoc file to process')
+    .option('-o, --output <path>', '(optional) path to the output file')
     .option('-v, --verbose', '(optional) display information about the transformation process', false)
     .option('-s, --show-notes', '(optional) generate slides with embedded speaker notes', false)
     .parse(process.argv);
@@ -85,6 +86,11 @@ if (!style || !styles.includes(style)) {
 // Activate output of speaker notes if required
 if (opts.showNotes) {
     options['attributes']['revealjs_showNotes'] = 'true';
+}
+
+// Set the output path if specified
+if (opts.output) {
+    options['to_file'] = opts.output;
 }
 
 logVerbose('asciidoctor-slides: Transforming Asciidoc source to HTML with attributes:');
