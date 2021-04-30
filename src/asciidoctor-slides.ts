@@ -18,9 +18,10 @@ function logVerbose(message: any) : void {
 }
 
 // Parse the command line parameters
-program.version('1.0')
+program.version('1.11')
     .requiredOption('-f, --filename <path>', '(mandatory) path of the Asciidoc file to process.')
     .option('-v, --verbose', '(optional) display information about the transformation process', false)
+    .option('-s, --show-notes', '(optional) generate slides with embedded speaker notes', false)
     .parse(process.argv);
 const opts = program.opts()
 
@@ -79,6 +80,11 @@ const appuioStyle = 'theme/appuio.css';
 const styles = [vshnStyle, appuioStyle];
 if (!style || !styles.includes(style)) {
     options['attributes']['revealjs_customtheme'] = vshnStyle;
+}
+
+// Activate output of speaker notes if required
+if (opts.showNotes) {
+    options['attributes']['revealjs_showNotes'] = 'true';
 }
 
 logVerbose('asciidoctor-slides: Transforming Asciidoc source to HTML with attributes:');
