@@ -120,20 +120,16 @@ section > .columns-middle > .content {
   margin: 0 0 0 1em; }
 
 .reveal ul {
-  list-style-type: none;
+  list-style-type: disc;
 }
 
-.reveal ul li::before {
-    content: "\2022";
+.reveal ul > li {
     color: #4cc3ff;
-    font-weight: bold;
-    width: 1em;
-    height: 1em;
-    display: inline-block;
 }
 
-.reveal li p {
+.reveal ul > li > p {
     display: inline;
+    color: rgb(0, 13, 26);
 }
 
 .reveal ol {
