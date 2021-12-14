@@ -58,7 +58,7 @@ const options = {
         'hide-uri-scheme': '',
         'source-highlighter': 'highlightjs',
         'highlightjs-theme': 'node_modules/highlightjs/styles/vs.css',
-        'kroki-server-url': 'https://vshn-kroki.appuioapp.ch',
+        'kroki-server-url': 'https://vshn-kroki.apps.cloudscale-lpg-2.appuio.cloud',
         'kroki-fetch-diagram': '',
         'stem': '',
         'revealjsdir': 'node_modules/reveal.js',
