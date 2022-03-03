@@ -23,6 +23,7 @@ program.version('1.11')
     .option('-o, --output <path>', '(optional) path to the output file')
     .option('-v, --verbose', '(optional) display information about the transformation process', false)
     .option('-s, --show-notes', '(optional) generate slides with embedded speaker notes', false)
+    .option('-a, --attribute [attributes...]', '(optional) additional Asciidoctor attributes to pass to the generator', '')
     .parse(process.argv);
 const opts = program.opts()
 
@@ -91,6 +92,20 @@ if (opts.showNotes) {
 // Set the output path if specified
 if (opts.output) {
     options['to_file'] = opts.output;
+}
+
+// Add more attributes, if any
+for (const index in opts.attribute) {
+    const attr = opts.attribute[index]
+    if (attr.includes('=')) {
+        const parts = opts.attribute[index].split('=')
+        if (parts.length > 0) {
+            options['attributes'][parts[0]] = parts[1]
+        }
+    }
+    else {
+        options['attributes'][attr] = ''
+    }
 }
 
 logVerbose('asciidoctor-slides: Transforming Asciidoc source to HTML with attributes:');
