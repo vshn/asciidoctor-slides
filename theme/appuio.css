@@ -327,9 +327,9 @@ section.coverimage>.paragraph {
 
  .reveal .slide-number {
   font-family: "Lato";
-  font-size: 50%;
+  font-size: 12pt;
   background-color: #002f47;
-  padding: 0px 15px 9px 15px;
+  padding: 0px 9px 8px 0px;
 }
 
 /*********************************************
@@ -350,10 +350,11 @@ section.coverimage>.paragraph {
  * FOOTER
  *********************************************/
 
-#slides-footer {
+ #slides-footer {
   position: absolute;
   display: table;
   width: 100%;
+  height: 44px;
   bottom: 0;
   background-color: #002f47;
   color: white;
@@ -361,11 +362,11 @@ section.coverimage>.paragraph {
 
 #slides-footer span {
   display: table-cell;
-  padding: 0px 15px 10px 15px;
+  padding: 0px 0px 0px 0px;
   min-width: 150px;
   text-align: center;
   font-family: "Lato";
-  font-size: 50%;
+  font-size: 12pt;
   vertical-align: middle;
 }
 
@@ -378,6 +379,16 @@ section.coverimage>.paragraph {
   text-align: center;
 }
 
+.footer #footer_logo {
+  height: 29px;
+  /*
+  Calculated with
+  https://codepen.io/sosuke/pen/Pjoqqp
+  via
+  https://stackoverflow.com/a/53336754
+  */
+  filter: invert(0%) sepia(97%) saturate(18%) hue-rotate(170deg) brightness(101%) contrast(102%);
+}
 
 /*********************************************
  * HORIZONTAL RULER
