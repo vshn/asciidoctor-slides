@@ -1,5 +1,5 @@
 # Step 1: Builder image
-FROM node:12.20.1-alpine3.11 AS builder
+FROM node:16.16.0-alpine3.16 AS builder
 
 WORKDIR /presentation
 COPY ["package.json", "package-lock.json", "/presentation/"]
@@ -9,11 +9,11 @@ COPY ["tsconfig.json", "gulpfile.js", "./"]
 COPY src /presentation/src
 RUN npm run build
 RUN rm -rf node_modules
-RUN npm install --production
+RUN npm install --omit=dev
 
 
 # Step 2: Runtime image
-FROM node:12.20.1-alpine3.11
+FROM node:16.16.0-alpine3.16
 
 # Required by the asciidoctor-kroki plugin, to store diagrams correctly
 WORKDIR /build

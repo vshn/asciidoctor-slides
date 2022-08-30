@@ -73,17 +73,6 @@ const options = {
     }
 };
 
-// Verify that the document has a default Reveal.js style,
-// otherwise set it to the VSHN style
-const doc = adoc.loadFile(filepath);
-const style = doc.getAttribute('revealjs_customtheme');
-const vshnStyle = 'theme/vshn.css';
-const appuioStyle = 'theme/appuio.css';
-const styles = [vshnStyle, appuioStyle];
-if (!style || !styles.includes(style)) {
-    options['attributes']['revealjs_customtheme'] = vshnStyle;
-}
-
 // Activate output of speaker notes if required
 if (opts.showNotes) {
     options['attributes']['revealjs_showNotes'] = 'true';
