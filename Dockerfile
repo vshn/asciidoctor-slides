@@ -1,5 +1,5 @@
 # Step 1: Builder image
-FROM node:16.16.0-alpine3.16 AS builder
+FROM dockerhub.vshn.net/library/node:18.14.0-alpine3.16 AS builder
 
 WORKDIR /presentation
 COPY ["package.json", "package-lock.json", "/presentation/"]
@@ -13,7 +13,7 @@ RUN npm install --omit=dev
 
 
 # Step 2: Runtime image
-FROM node:16.16.0-alpine3.16
+FROM dockerhub.vshn.net/library/node:18.14.0-alpine3.16
 
 # Required by the asciidoctor-kroki plugin, to store diagrams correctly
 WORKDIR /build
