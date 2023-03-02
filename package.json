@@ -1,6 +1,6 @@
 {
   "name": "revealjs-template",
-  "version": "1.15.0",
+  "version": "1.17.0",
   "description": "A template for presentations using Reveal.js and Asciidoctor",
   "main": "index.js",
   "directories": {
