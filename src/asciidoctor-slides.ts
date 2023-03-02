@@ -18,12 +18,13 @@ function logVerbose(message: any) : void {
 }
 
 // Parse the command line parameters
-program.version('1.11')
+program.version('1.17.0')
     .requiredOption('-f, --filename <path>', '(mandatory) path of the Asciidoc file to process')
     .option('-o, --output <path>', '(optional) path to the output file')
     .option('-v, --verbose', '(optional) display information about the transformation process', false)
     .option('-s, --show-notes', '(optional) generate slides with embedded speaker notes', false)
     .option('-a, --attribute [attributes...]', '(optional) additional Asciidoctor attributes to pass to the generator', '')
+    .option('-e, --embedded', '(optional) make slides embeddable', false)
     .parse(process.argv);
 const opts = program.opts()
 
@@ -83,6 +84,13 @@ if (opts.output) {
     options['to_file'] = opts.output;
 }
 
+// Set embedded output if required
+if (opts.embedded) {
+    options['attributes']['data-uri'] = ''
+    options['attributes']['allow-uri-read'] = ''
+    options['attributes']['revealjs_embedded'] = 'true'
+}
+
 // Add more attributes, if any
 for (const index in opts.attribute) {
     const attr = opts.attribute[index]
@@ -97,8 +105,8 @@ for (const index in opts.attribute) {
     }
 }
 
-logVerbose('asciidoctor-slides: Transforming Asciidoc source to HTML with attributes:');
-logVerbose(options.attributes);
+logVerbose('asciidoctor-slides: Transforming Asciidoc source to HTML with options:');
+logVerbose(options);
 
 // Perform the conversion and exit
 adoc.convertFile(filepath, options);
