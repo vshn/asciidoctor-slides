@@ -22,7 +22,7 @@
     "@fontsource/montserrat": "^4.2.2",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "asciidoctor": "^2.2.2",
-    "asciidoctor-kroki": "^0.11.0",
+    "asciidoctor-kroki": "^0.18.0",
     "asciinema-player": "^2.6.1",
     "commander": "^7.2.0",
     "highlightjs": "^9.16.2",
